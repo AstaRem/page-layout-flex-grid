@@ -5,14 +5,138 @@
 // --------------------------------------
 // layout 1
 $bcgr-color: rgb(196, 235, 250);
-$aside-color: rgb(110, 219, 110);
+$aside-bcgr: rgb(110, 219, 110);
 $article-bcgr: rgb(251, 176, 75);
-$image-color: rgb(252, 210, 74);
-$header-color: rgb(3, 191, 177);
+$image-bcgr: rgb(252, 210, 74);
+$header-bcgr: rgb(3, 191, 177);
+$text-color: rgb(251, 251, 251);
  
-// --------------------------------------
-// layout 2
 // layout 1 desktop
+body {
+    background-color: $bcgr-color;
+    color: $text-color;
+    box-sizing: border-box;
+}
+
+header, main, h1, aside, p, article {
+    font-size: 32px;
+    font-weight: 400;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    // padding: 20px;
+}
+
+p {
+    padding: 20px;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1300px;
+    height: 100vh;
+    margin: 0 auto;
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+        list-style: none; 
+        padding-left: 40px;
+        padding-right: 40px;
+        @media only screen and (max-width: 600px){
+            font-size: 16px;
+            padding-right: 0;
+            padding-left: 0;
+
+        }
+    
+
+            li a {
+                text-decoration: none;
+                background-color: $text-color;
+                color: $header-bcgr;
+                padding: 10px 20px;
+                border-radius: 7px;
+                @media only screen and (max-width: 600px){
+                    padding: 5px 5px;
+                }
+            }
+    }
+
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: $header-bcgr;
+    margin-bottom: 50px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 3%;
+    width: 100%;
+    height: 70%;
+    @media only screen and (max-width: 650px){
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    aside {
+        width: 30%;
+        height: 100%;
+        background-color: $aside-bcgr;
+        @media only screen and (max-width: 650px){
+            width: 100%;
+        }
+    
+        
+    }
+
+    article {
+        width: 67%;
+        height: 100%;
+        background-color: $article-bcgr;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        @media only screen and (max-width: 650px){
+            width: 100%;
+        }
+    
+        h1{
+            text-align: center;
+        }
+        .image-container {
+            display: flex; 
+            justify-content: space-between;
+            padding: 20px;
+        }
+            .image {
+                width: 200px;
+                height: 200px;
+                background-color: $image-bcgr;
+                text-align: center;
+                align-content: center;
+                flex-shrink: 1; 
+                border: 1px solid white;
+            }
+    
+    }
+    
+    
+}
+
+
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: $header-bcgr;
+    margin-top: 50px;
+
+}
+
 // layout 1 mobile
 
 // --------------------------------------
