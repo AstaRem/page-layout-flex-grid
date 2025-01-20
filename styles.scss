@@ -12,6 +12,11 @@ $image-bcgr: rgb(252, 210, 74);
 $header-bcgr: rgb(3, 191, 177);
 $text-color: rgb(251, 251, 251);
 $square-color: rgb(237, 109, 82);
+$square1-color: rgb(255,118,118);
+$square2-color: rgb(194, 255, 118);
+$square3-color: rgb(255,155,247);
+$square4-solor: rgb(155,164,255);
+
 
 // layout 1 desktop
 body {
@@ -30,7 +35,6 @@ body {
     font-size: 32px;
     font-weight: 400;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-    // padding: 20px;
 }
 
 p {
@@ -151,13 +155,8 @@ p {
             }
 
         }
-
     }
-
-
 }
-
-
 
 .footer-1 {
     width: 100%;
@@ -314,6 +313,9 @@ footer.footer-2 {
 
 // --------------------------------------
 // layout 3
+.page-wrapper.layout-3-wrapper {
+    max-width: 1000px;
+}
 main.main-3 {
     display: flex;
     flex-direction: column;
@@ -391,6 +393,3 @@ main.main-3 {
 
 // --------------------------------------
 // layout 4
-// layout 4 desktop
-// layout 4 mobile
-
