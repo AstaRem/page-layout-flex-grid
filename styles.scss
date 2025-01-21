@@ -15,7 +15,8 @@ $square-color: rgb(237, 109, 82);
 $square1-color: rgb(255,118,118);
 $square2-color: rgb(194, 255, 118);
 $square3-color: rgb(255,155,247);
-$square4-solor: rgb(155,164,255);
+$square4-color: rgb(155,164,255);
+$grid-bcgr: rgb(208, 208, 208);
 
 
 // layout 1 desktop
@@ -393,3 +394,82 @@ main.main-3 {
 
 // --------------------------------------
 // layout 4
+.page-wrapper.layout-4-wrapper {
+    max-width: 1000px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main.main-4 {
+    background-color: $grid-bcgr;
+
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    width: 100%;
+    height: 80vh;
+}
+
+.nav-4 {
+    background-color: $bcgr-color;
+}
+
+.main-4 .grid-container-three > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 10px;
+
+}
+
+.grid-container-three{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat (4, 200px);
+    grid-gap: 5px;
+    height: 400px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.item_1{
+    background-color: $square-color;
+    grid-column: 1/3;
+    grid-row: 1/5;
+}
+
+.item_2{
+    background-color: $square2-color;
+    grid-column: 3/7;
+    grid-row: 1/3;
+
+}
+
+.item_3{
+    background-color: $square3-color;
+    grid-column: 3/5 ;
+    grid-row: 3/5;
+
+}
+
+.item_4a{
+    background-color: $square4-color;
+    grid-column: 5/7;
+    grid-row: 3/4;
+
+}
+
+.item_4b{
+    background-color: $square4-color;
+    grid-column: 5/7;
+    grid-row: 4/5;
+
+}
+
